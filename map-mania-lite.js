@@ -59,11 +59,6 @@ function initMap() {
 
 
     ]
-    // loop through markers
-    for(var i = 0;i < marker.length;i++){
-        addMarker(markers[i]);
-    }
-
 
     function addMarker(props){
         var marker3 = new google.maps.Marker({
@@ -90,6 +85,12 @@ function initMap() {
         
 
     }
+    // loop through markers
+    for(var i = 0;i < marker.length;i++){
+        addMarker(marker[i]);
+    }
+
+
     // Note that several message boards suggested using 'idle' instead of 'bounds_changed' because 
     // 'bounds_changed' gets called over and over when the user drags the map.
     google.maps.event.addListener(gMap, 'idle', function() {

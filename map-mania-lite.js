@@ -96,7 +96,6 @@ function initMap() {
     google.maps.event.addListener(gMap, 'idle', function() {
         updateGame()
     });
-
     SetHint("Hint 1");
     SetScore(score);
 }
